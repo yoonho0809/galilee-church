@@ -61,10 +61,10 @@
           '<div class="footer__cols">' +
             '<div class="footer__col"><h4>둘러보기</h4><ul><li><a href="about.html">교회 소개</a></li><li><a href="worship.html">예배 안내</a></li><li><a href="sermons.html">설교 영상</a></li></ul></div>' +
             '<div class="footer__col"><h4>함께하기</h4><ul><li><a href="news.html">교회 소식</a></li><li><a href="album.html">교회 앨범</a></li><li><a href="location.html">오시는 길</a></li><li><a href="https://www.youtube.com/@TV-ew5ic" target="_blank" rel="noopener">유튜브 채널 ↗</a></li></ul></div>' +
-            '<div class="footer__col"><h4>문의</h4><ul><li>033-000-0000</li><li>galilee@church.kr</li><li>강원특별자치도 춘천시</li></ul></div>' +
+            '<div class="footer__col"><h4>문의</h4><ul><li>033-000-0000</li><li>galilee@church.kr</li><li>춘천시 우두동 309-3</li></ul></div>' +
           '</div>' +
         '</div>' +
-        '<div class="footer__bottom"><span>© 2026 갈릴리교회 GALILEE CHURCH.</span><span>강원특별자치도 춘천시 ○○로 00</span></div>' +
+        '<div class="footer__bottom"><span>© 2026 갈릴리교회 GALILEE CHURCH.</span><span>강원특별자치도 춘천시 우두동 309-3</span></div>' +
       '</div></footer>';
   }
 

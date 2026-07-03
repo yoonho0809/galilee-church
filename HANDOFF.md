@@ -5,6 +5,21 @@
 
 ---
 
+## 🌐 배포 (인터넷 공개) — 완료
+- **공개 주소**: https://yoonho0809.github.io/galilee-church/
+- **호스팅**: GitHub Pages (무료) · **저장소**: https://github.com/yoonho0809/galilee-church (public, main 브랜치)
+- **수정 내용을 실제 사이트에 반영하는 법** (매우 중요):
+  ```
+  cd E:/Cluade/galilee-church
+  git add -A
+  git commit -m "수정 내용"
+  git push
+  ```
+  push 후 약 1분이면 공개 주소에 자동 반영됩니다. (사진 추가·정보 수정 모두 동일)
+- 커스텀 도메인(예: galilee-church.kr)을 사면 GitHub Pages 설정에서 연결 가능.
+
+---
+
 ## ▶ 재개 지점 (다음에 이어서 할 일)  ※ 2026-07-03 기준
 
 **지금까지 완료**
