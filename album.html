@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>교회 앨범 · 갈릴리교회</title>
+  <meta name="description" content="갈릴리교회의 예배와 행사, 함께한 순간들을 담은 사진 앨범입니다." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="album">
+  <div id="site-header"></div>
+
+  <section class="page-hero">
+    <span class="eyebrow eyebrow--sea">교회 앨범 · Albums</span>
+    <h1>함께한 순간들</h1>
+    <p>예배와 행사, 웃음과 은혜가 있던 갈릴리교회의 시간을 사진으로 나눕니다.</p>
+  </section>
+
+  <section class="albums albums--page" style="padding-top:clamp(40px,6vw,60px);">
+    <div class="wrap">
+      <div class="albums__grid" id="albumsGrid"></div>
+      <div class="albums-empty" id="albumsEmpty" hidden>아직 등록된 앨범이 없습니다.</div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <!-- Album viewer (한 앨범의 사진들) -->
+  <div class="viewer" id="viewer" role="dialog" aria-modal="true">
+    <div class="viewer__bar">
+      <div class="viewer__meta"><h2 id="viewerTitle"></h2><span id="viewerDate"></span></div>
+      <button class="viewer__close" id="viewerClose">닫기 ✕</button>
+    </div>
+    <div class="viewer__grid" id="viewerGrid"></div>
+  </div>
+
+  <!-- Single-photo lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose" aria-label="닫기">×</button>
+    <img src="" alt="" id="lightboxImg" />
+  </div>
+
+  <script src="js/site.js"></script>
+  <script src="js/albums.js"></script>
+  <script src="js/album.js"></script>
+</body>
+</html>
