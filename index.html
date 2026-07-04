@@ -69,8 +69,8 @@
         <p class="reveal">처음 오시는 분은 주일 대예배에 오시면 가장 좋습니다.</p>
       </div>
       <div class="service__grid" style="grid-template-columns:repeat(3,1fr);">
-        <div class="svc reveal"><span class="svc__tag">Sunday</span><h3 class="svc__name">주일 1부 예배</h3><div class="svc__time"><b>09:00</b><span>대예배실</span></div></div>
-        <div class="svc reveal"><span class="svc__tag">Sunday</span><h3 class="svc__name">주일 2부 예배</h3><div class="svc__time"><b>11:00</b><span>대예배실</span></div></div>
+        <div class="svc reveal"><span class="svc__tag">Sunday</span><h3 class="svc__name">주일 예배</h3><div class="svc__time"><b>10:50</b><span>대예배실</span></div></div>
+        <div class="svc reveal"><span class="svc__tag">Sunday</span><h3 class="svc__name">교회학교</h3><div class="svc__time"><b>09:30</b><span>교육관</span></div></div>
         <div class="svc reveal"><span class="svc__tag">Wednesday</span><h3 class="svc__name">수요 예배</h3><div class="svc__time"><b>19:30</b><span>대예배실</span></div></div>
       </div>
       <div style="text-align:center;margin-top:34px;"><a href="worship.html" class="btn reveal">전체 예배 시간 보기 →</a></div>
@@ -115,6 +115,30 @@
     </div>
   </section>
 
+  <!-- ============ Praise ============ -->
+  <section class="praise" id="praise">
+    <div class="wrap">
+      <div class="praise__head sec-head" style="max-width:none;">
+        <span class="eyebrow reveal">우리 교회 찬양 · Praise</span>
+        <h2 class="reveal">우두동의 불꽃</h2>
+        <p class="reveal">갈릴리교회가 함께 부르는 찬양입니다. 아래에서 들어보세요.</p>
+      </div>
+      <div class="praise__list">
+        <div class="praise__song reveal">
+          <div class="praise__no">01</div>
+          <div class="praise__info"><div class="praise__title">우두동의 불꽃</div><div class="praise__sub">여성 보컬 버전</div></div>
+          <audio controls preload="none" src="music/song1.mp3">브라우저가 오디오를 지원하지 않습니다.</audio>
+        </div>
+        <div class="praise__song reveal">
+          <div class="praise__no">02</div>
+          <div class="praise__info"><div class="praise__title">우두동의 불꽃</div><div class="praise__sub">Version 2</div></div>
+          <audio controls preload="none" src="music/song2.mp3">브라우저가 오디오를 지원하지 않습니다.</audio>
+        </div>
+      </div>
+      <p class="praise__note reveal">🎵 우하단의 <b>배경음악</b> 버튼을 누르면 첫 번째 곡이 잔잔하게 흐릅니다.</p>
+    </div>
+  </section>
+
   <!-- ============ CTA ============ -->
   <section class="cta-band">
     <div class="wrap">
@@ -126,6 +150,14 @@
 
   <div id="site-footer"></div>
 
+  <!-- 배경음악 버튼 + 오디오 -->
+  <button class="music-fab" id="musicFab" aria-label="배경음악 켜기/끄기">
+    <span class="music-fab__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="music-fab__label">배경음악</span>
+  </button>
+  <audio id="bgAudio" src="music/song1.mp3" loop preload="none"></audio>
+
   <script src="js/site.js"></script>
+  <script src="js/music.js"></script>
 </body>
 </html>
