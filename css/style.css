@@ -106,10 +106,11 @@ h1, h2, h3, h4 { font-family: var(--f-display); font-weight: 400; margin: 0; lin
 .brand { display: flex; align-items: center; gap: 12px; color: #fff; transition: color 0.4s var(--ease); }
 .solid .brand { color: var(--ink); }
 .brand__logo {
-  width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center;
-  background: var(--gold-deep); color: #fff; font-family: var(--f-accent); font-size: 1.2rem;
-  flex-shrink: 0;
+  width: 44px; height: 44px; border-radius: 50%; object-fit: cover;
+  background: var(--cream); flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(36,42,43,0.14);
 }
+.footer__brand .brand__logo { width: 52px; height: 52px; }
 .brand__name { font-family: var(--f-display); font-size: 1.28rem; letter-spacing: 0.02em; }
 .brand__sub { font-size: 0.6rem; letter-spacing: 0.32em; text-transform: uppercase; opacity: 0.7; display: block; margin-top: -2px; }
 
@@ -480,3 +481,43 @@ h1, h2, h3, h4 { font-family: var(--f-display); font-weight: 400; margin: 0; lin
 @keyframes eq { 0%,100% { height: 5px; } 50% { height: 15px; } }
 @media (prefers-reduced-motion: reduce) { .music-fab.playing .music-fab__bars i { animation: none; height: 10px; } }
 @media (max-width: 480px) { .music-fab { right: 14px; bottom: 14px; padding: 11px 18px; } }
+
+/* =============================================================
+   Polish pass — 료칸급 디테일 (밝은 톤 유지)
+   ============================================================= */
+
+/* 히어로 사진 슬로우 줌 (Ken Burns) */
+.hero__slide img { will-change: transform; }
+.hero__slide.active img { animation: kenburns 7s ease-out both; }
+@keyframes kenburns { from { transform: scale(1.09); } to { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .hero__slide.active img { animation: none; } }
+
+/* 히어로 타이틀 정제 + 장식 라인 */
+.hero__title { letter-spacing: 0.02em; }
+.hero__rule {
+  display: block; width: 56px; height: 2px; margin: 26px auto 4px;
+  background: linear-gradient(90deg, transparent, var(--gold-soft), transparent);
+}
+
+/* 섹션 eyebrow 앞 장식 라인 (에디토리얼 감성) */
+.eyebrow::before {
+  content: ""; display: inline-block; width: 26px; height: 1px;
+  background: currentColor; opacity: 0.5; vertical-align: middle;
+  margin-right: 12px; transform: translateY(-2px);
+}
+
+/* 카드/섹션 그림자·모서리 정제 */
+.svc, .min, .album-card, .praise__song, .booking { border-radius: 16px; }
+.svc:hover, .min:hover, .album-card:hover { box-shadow: 0 26px 56px rgba(30,81,77,0.13); }
+
+/* 헤더 브랜드 정렬 미세 조정 */
+.brand__name { line-height: 1.1; }
+
+/* 링크 버튼 화살표 살짝 이동 */
+.btn { transition: background 0.4s var(--ease), color 0.4s var(--ease), border-color 0.4s var(--ease), transform 0.3s var(--ease), letter-spacing 0.4s var(--ease); }
+.btn:hover { letter-spacing: 0.08em; }
+
+/* 이미지 슬롯(사진) 로드 시 부드러운 페이드 */
+.slot img { animation: imgfade 1s var(--ease) both; }
+@keyframes imgfade { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .slot img { animation: none; } }

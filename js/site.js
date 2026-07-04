@@ -11,6 +11,13 @@
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var page = document.body.getAttribute('data-page') || '';
 
+  /* 파비콘(브라우저 탭 아이콘) 주입 */
+  (function () {
+    var fav = document.createElement('link');
+    fav.rel = 'icon'; fav.type = 'image/png'; fav.href = 'images/favicon.png';
+    document.head.appendChild(fav);
+  })();
+
   /* ---- 메뉴 정의 (여기만 고치면 전체 반영) ---- */
   var NAV = [
     { href: 'index.html',    ko: '홈',        key: 'home' },
@@ -36,7 +43,7 @@
     headerHost.outerHTML =
       '<header class="site-header' + (page !== 'home' ? ' solid' : '') + '" id="header">' +
         '<a class="brand" href="index.html" aria-label="갈릴리교회 홈">' +
-          '<span class="brand__logo">G</span>' +
+          '<img class="brand__logo" src="images/logo-mark.png" alt="갈릴리교회 로고" />' +
           '<span><span class="brand__name">갈릴리교회</span><span class="brand__sub">Galilee Church</span></span>' +
         '</a>' +
         '<nav class="nav" aria-label="주요 메뉴">' +
@@ -55,7 +62,7 @@
       '<footer class="site-footer"><div class="wrap">' +
         '<div class="footer__top">' +
           '<div class="footer__brand">' +
-            '<a class="brand" href="index.html"><span class="brand__logo">G</span><span><span class="brand__name">갈릴리교회</span><span class="brand__sub">Galilee Church</span></span></a>' +
+            '<a class="brand" href="index.html"><img class="brand__logo" src="images/logo-mark.png" alt="갈릴리교회 로고" /><span><span class="brand__name">갈릴리교회</span><span class="brand__sub">Galilee Church</span></span></a>' +
             '<p>누구에게나 문이 열려 있는 밝고 따뜻한 환대의 공동체.</p>' +
           '</div>' +
           '<div class="footer__cols">' +
